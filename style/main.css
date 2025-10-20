@@ -606,7 +606,7 @@ h6 {
     display: flex;
     justify-content: center;
     gap: 45px;
-    margin-top: -5% !important;
+    margin-top: -3% !important;
   }
   .social-mobile a:nth-child(1) .icon {
     background-position: 1px 0;
