@@ -605,8 +605,15 @@ h6 {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 45px;
+    gap: 5px;
     margin-top: -4.5% !important;
+  }
+  .social-mobile a {
+    width: 95px;
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .social-mobile a:nth-child(1) .icon {
     background-position: 1px 0;
@@ -622,6 +629,7 @@ h6 {
     background-position: -90px 0;
     background-size: 200px;
     width: 60px;
+    margin: 0 0 0 13px;
   }
   .social-mobile a:nth-child(4) .icon {
     background-position: -150px 0;
@@ -637,7 +645,7 @@ h6 {
     width: 90%;
     margin: 0 auto;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     gap: 14px;
     text-wrap: nowrap;
     margin-top: -4% !important;
@@ -818,3 +826,4 @@ h6 {
     text-align: center;
   }
 }
+
