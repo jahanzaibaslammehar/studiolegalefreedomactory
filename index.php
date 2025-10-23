@@ -117,8 +117,8 @@
       <h2>Tributario Amministrativo Srl Lavoro</h2>
     </div>
     <div class="hero">
-      <img src="./assets/bg_upscaled.png" alt="hero" />
-      <div class="logo-hero"></div>
+      <img src="./assets/bg_upscaled.png" alt="hero" class="img-click-margin" />
+      <div class="logo-hero text-click-margin"></div>
     </div>
     <div class="offices">
       <div class="loc">
@@ -245,6 +245,18 @@
   <div class="btn-cookie">
     <span><a href="#">View more</a></span>
     <span><a href="#">Cookie Settings</a></span>
-    <span id="on"><a href="#">Accetto</a></span>
+    <span id="on"><a href="#" onclick="addClass()">Accetto</a></span>
   </div>
 </div>
+
+<script>
+  function addClass(){
+    // alert("Hello World!");
+    //get class img-click-margin and add margin-bottom 5%
+    const imgClickMargin = document.querySelector('.img-click-margin');
+    imgClickMargin.style.marginBottom = '5%';
+
+    const textClickMargin = document.querySelector('.text-click-margin');
+    textClickMargin.style.marginBottom = '10%';
+  }
+</script>

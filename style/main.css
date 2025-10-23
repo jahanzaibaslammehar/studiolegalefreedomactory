@@ -455,6 +455,15 @@ h6 {
   }
 }
 @media screen and (max-width: 440px) {
+
+  /* .img-click-margin {
+    margin-bottom: 5%;
+  }
+  .text-click-margin {
+    margin-bottom: 5%;
+  } */
+
+
   .scaled-container {
     transform: none;
     position: static;
