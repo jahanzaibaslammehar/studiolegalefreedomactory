@@ -122,23 +122,23 @@
     </div>
     <div class="offices">
       <div class="loc">
-        <h2>NAPOLI</h2>
+        <h2">NAPOLI</h2>
         <span>Via Toledo, 329</span>
       </div>
       <div class="loc">
-        <h2>BOLOGNA</h2>
+        <h2">BOLOGNA</h2>
         <span>Via d'Azeglio, 35</span>
       </div>
       <div class="loc">
-        <h2>PESCARA</h2>
+        <h2">PESCARA</h2>
         <span>Via Ostuni, 38</span>
       </div>
       <div class="loc">
-        <h2>TREVISO</h2>
+        <h2">TREVISO</h2>
         <span>Via Sartori, 2</span>
       </div>
     </div>
-    <div class="social-mobile">
+    <div class="social-mobile icon-click-margin">
       <a href="#"><div class="icon"></div></a>
       <a href="#"><div class="icon"></div></a>
       <a href="#"><div class="icon"></div></a>
@@ -146,19 +146,19 @@
     </div>
     <div class="offices-mobile">
       <div class="loc">
-        <h2>NAPOLI</h2>
+        <h2 class="country-click-margin">NAPOLI</h2>
         <span>Via Toledo, 329</span>
       </div>
       <div class="loc">
-        <h2>BOLOGNA</h2>
+        <h2 class="country-click-margin">BOLOGNA</h2>
         <span>Via d'Azeglio, 35</span>
       </div>
       <div class="loc">
-        <h2>PESCARA</h2>
+        <h2 class="country-click-margin">PESCARA</h2>
         <span>Via Ostuni, 38</span>
       </div>
       <div class="loc">
-        <h2>TREVISO</h2>
+        <h2 class="country-click-margin">TREVISO</h2>
         <span>Via Sartori, 2</span>
       </div>
     </div>
@@ -250,13 +250,32 @@
 </div>
 
 <script>
-  function addClass(){
-    // alert("Hello World!");
-    //get class img-click-margin and add margin-bottom 5%
-    const imgClickMargin = document.querySelector('.img-click-margin');
-    imgClickMargin.style.marginBottom = '5%';
+function addClass() {
+  const imgClickMargin = document.querySelector('.img-click-margin');
+  const textClickMargin = document.querySelector('.text-click-margin');
+  const iconClickMargin = document.querySelector('.icon-click-margin');
+  const countryClickMargins = document.querySelectorAll('.country-click-margin');
 
-    const textClickMargin = document.querySelector('.text-click-margin');
-    textClickMargin.style.marginBottom = '10%';
+  // Only apply margin when screen width ≤ 440px
+  if (window.matchMedia("(max-width: 440px)").matches) {
+    if (imgClickMargin) imgClickMargin.style.marginBottom = '3.5%';
+    if (textClickMargin) textClickMargin.style.marginBottom = '7.5%';
+    if (iconClickMargin) iconClickMargin.style.marginBottom = '4%';
+    if (countryClickMargins.length > 0) {
+      countryClickMargins.forEach(el => {
+        el.style.setProperty('margin-bottom', '7.5%', 'important');
+      });
+    }
+  } else {
+    if (imgClickMargin) imgClickMargin.style.marginBottom = '';
+    if (textClickMargin) textClickMargin.style.marginBottom = '';
+    if (iconClickMargin) iconClickMargin.style.marginBottom = '';
+    if (countryClickMargins.length > 0) {
+      countryClickMargins.forEach(el => {
+        el.style.removeProperty('margin-bottom');
+      });
+    }
   }
+}
+
 </script>
